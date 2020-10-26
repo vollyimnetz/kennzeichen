@@ -36,4 +36,7 @@
     }
   }
 }
+.kennzeichenWrap {
+  .v-input { max-width: 8em; margin:0 auto !important; font-size:1.5em; }
+}
 </style>

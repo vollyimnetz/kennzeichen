@@ -1,8 +1,8 @@
 <template>
-  <div class="kennzeichenWrap">
+  <div class="kennzeichenWrap container">
+
     <h1>Deutsche Kennzeichen</h1>
     <v-text-field outlined v-model="search" placeholder="Kennzeichen" clearable></v-text-field>
-
     <div v-if="searchResult.length>0">
       <ul class="list-unstyled">
         <li v-for="item in searchResult" :key="item.id">
