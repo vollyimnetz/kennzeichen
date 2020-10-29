@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "956862e3954f2f5cc63d",
-    "url": "/kennzeichen/css/app.42053f29.css"
+    "revision": "4513b5c759d504f25647",
+    "url": "/kennzeichen/css/app.f20c4ddc.css"
   },
   {
-    "revision": "ce72e74090eb946bc071",
+    "revision": "abcacddee02ddc0bda6f",
     "url": "/kennzeichen/css/chunk-vendors.71849180.css"
   },
   {
@@ -24,16 +24,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kennzeichen/fonts/materialdesignicons-webfont.fec1b66a.woff"
   },
   {
-    "revision": "e93a01edc2805e52b29993a10f9ee224",
+    "revision": "d22f4032b9ace6f1ec22690f461f5548",
     "url": "/kennzeichen/index.html"
   },
   {
-    "revision": "956862e3954f2f5cc63d",
-    "url": "/kennzeichen/js/app.5fb7ba2f.js"
+    "revision": "4513b5c759d504f25647",
+    "url": "/kennzeichen/js/app.77361886.js"
   },
   {
-    "revision": "ce72e74090eb946bc071",
-    "url": "/kennzeichen/js/chunk-vendors.dd234dc9.js"
+    "revision": "abcacddee02ddc0bda6f",
+    "url": "/kennzeichen/js/chunk-vendors.5f10c5a8.js"
   },
   {
     "revision": "721e571fe13e70f4eff7e6f1791ed506",

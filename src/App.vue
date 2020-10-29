@@ -1,11 +1,33 @@
 <template>
-  <div id="app"><!--
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-    </div>-->
-    <router-view/>
+  <div id="app">
+    <v-app>
+      <v-main>
+        <!--
+        <div id="nav">
+          <router-link to="/">Home</router-link>
+        </div>
+        -->
+        <router-view/>
+        <v-footer padless fixed dark>
+          <v-card class="flex" flat tile>
+            <v-card-text class="py-2 white--text text-center">
+              <app-version></app-version>
+            </v-card-text>
+          </v-card>
+        </v-footer>
+      </v-main>
+    </v-app>
   </div>
 </template>
+
+<script>
+import appVersion from './components/appVersion.vue';
+export default {
+  components:{
+    appVersion
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -15,7 +37,7 @@
   text-align: center;
   color: #2c3e50;
   max-width: 500px;
-  margin: 5% auto;
+  margin: 0 auto;
 }
 
 .list-unstyled {
@@ -36,7 +58,7 @@
     }
   }
 }
-.kennzeichenWrap {
-  .v-input { max-width: 8em; margin:0 auto !important; font-size:1.5em; }
+.kennzeichenWrap { margin-top:5vh; 
+  .v-input { max-width: 10em; margin:0 auto !important; }
 }
 </style>

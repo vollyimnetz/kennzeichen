@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kennzeichen/precache-manifest.3d00965d36eb8ed79b487bfa70984c50.js"
+  "/kennzeichen/precache-manifest.e0e2342501951c4bba8e4d94ba8ffb7d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "kennzeichen"});

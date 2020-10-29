@@ -27,7 +27,7 @@ export default {
   computed:{
     searchResult() {
       let that = this;
-      if(this.search.length===0) return [];
+      if(this.search===null || this.search.length===0) return [];
       return this.data.filter(elem => {
         return elem.id.toLowerCase().indexOf( that.search.toLowerCase() ) > -1;
       })
