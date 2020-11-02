@@ -1,7 +1,10 @@
 const webpack = require('webpack');
 module.exports = {
   pwa: {
-    name: 'Kennzeichen'
+    name: 'Kennzeichen',
+    workboxOptions: {
+      skipWaiting: true
+    }
   },
   
   publicPath: '/kennzeichen/',

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4513b5c759d504f25647",
+    "revision": "a6aa2ec402249be1d8a6",
     "url": "/kennzeichen/css/app.f20c4ddc.css"
   },
   {
@@ -24,12 +24,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kennzeichen/fonts/materialdesignicons-webfont.fec1b66a.woff"
   },
   {
-    "revision": "d22f4032b9ace6f1ec22690f461f5548",
+    "revision": "ac2723e02e2d446827687b56d9fa5f2e",
     "url": "/kennzeichen/index.html"
   },
   {
-    "revision": "4513b5c759d504f25647",
-    "url": "/kennzeichen/js/app.77361886.js"
+    "revision": "a6aa2ec402249be1d8a6",
+    "url": "/kennzeichen/js/app.00b40aa2.js"
   },
   {
     "revision": "abcacddee02ddc0bda6f",

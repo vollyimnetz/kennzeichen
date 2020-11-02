@@ -14,16 +14,12 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kennzeichen/precache-manifest.e0e2342501951c4bba8e4d94ba8ffb7d.js"
+  "/kennzeichen/precache-manifest.9c051ea8cdffd92d79f25386e6ae205f.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "kennzeichen"});
 
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
+workbox.core.skipWaiting();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
