@@ -1,3 +1,4 @@
+importScripts('./third-party/workbox-v6.1.0/workbox-sw.js');
 import { precacheAndRoute, matchPrecache } from 'workbox-precaching';
 import { setCatchHandler } from 'workbox-routing';
 
