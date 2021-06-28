@@ -1,8 +1,8 @@
-importScripts('./third-party/workbox-v6.1.0/workbox-sw.js');
+importScripts('./third-party/workbox-v6.1.5/workbox-sw.js');
 import { precacheAndRoute, matchPrecache } from 'workbox-precaching';
 import { setCatchHandler } from 'workbox-routing';
 
-workbox.setConfig({modulePathPrefix: '/kennzeichen/third-party/workbox-v6.1.0' });
+workbox.setConfig({modulePathPrefix: '/kennzeichen/third-party/workbox-v6.1.5' });
 
 workbox.core.setCacheNameDetails({prefix: "kennzeichen"});
 workbox.core.skipWaiting();
