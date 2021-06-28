@@ -59,6 +59,8 @@ export default {
   }
 }
 .kennzeichenWrap { margin-top:5vh; 
-  .v-input { max-width: 10em; margin:0 auto !important; }
+  .v-input { max-width: 12em; margin:0 auto !important; 
+    input { text-align: center;}
+  }
 }
 </style>

@@ -2,17 +2,17 @@
   <div class="kennzeichenWrap container">
 
     <h1>Deutsche Kennzeichen</h1>
-    <v-text-field outlined v-model="search" placeholder="Kennzeichen" clearable></v-text-field>
-    <div v-if="searchResult.length>0">
-      <ul class="list-unstyled">
-        <li v-for="item in searchResult" :key="item.id">
-          <h1>{{item.id}}</h1>
-          <div>{{item.location}}</div>
-          <div>{{item.state}}</div>
-          <div>{{item.district}}</div>
-        </li>
-      </ul>
-    </div>
+    <v-text-field v-model="search" placeholder="Kennzeichen eingeben" clearable @input="makeUppercase"></v-text-field>
+    
+    <v-slide-y-transition class="list-unstyled" group tag="ul">
+      <li v-for="item in searchResult" :key="item.id">
+        <h1>{{item.id}}</h1>
+        <div>{{item.location}}</div>
+        <div>{{item.state}}</div>
+        <div>{{item.district}}</div>
+      </li>
+    </v-slide-y-transition>
+  
   </div>
 </template>
 
@@ -25,12 +25,20 @@ export default {
     data: baseData
   }),
   computed:{
+    orderedData() {
+      return this.data.sort((a,b) => a.id.length - b.id.length );
+    },
     searchResult() {
-      let that = this;
       if(this.search===null || this.search.length===0) return [];
-      return this.data.filter(elem => {
-        return elem.id.toLowerCase().indexOf( that.search.toLowerCase() ) > -1;
+      return this.orderedData.filter(elem => {
+        return elem.id.toUpperCase().indexOf( this.search.toUpperCase() ) > -1;
       })
+    }
+  },
+  methods: {
+    makeUppercase() {
+      if(this.search===null) return;
+      this.search = this.search.toUpperCase();
     }
   }
 }
