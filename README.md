@@ -1,4 +1,5 @@
 # kennzeichen
+Public access: https://vollyimnetz.github.io/kennzeichen
 
 ## Project setup
 ```
