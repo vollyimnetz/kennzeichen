@@ -1,0 +1,65 @@
+{
+  "_index-017a078c.js": {
+    "file": "assets/index-017a078c.js",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.css": {
+    "file": "assets/index-92c393d8.css",
+    "src": "index.css"
+  },
+  "index.html": {
+    "css": [
+      "assets/index-92c393d8.css"
+    ],
+    "dynamicImports": [
+      "src/views/Home.vue",
+      "src/views/NumberGame.vue",
+      "src/views/Page404.vue"
+    ],
+    "file": "assets/index-24f82411.js",
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "src/views/Home.css": {
+    "file": "assets/Home-53cfef57.css",
+    "src": "src/views/Home.css"
+  },
+  "src/views/Home.vue": {
+    "css": [
+      "assets/Home-53cfef57.css"
+    ],
+    "file": "assets/Home-9d5f4cc6.js",
+    "imports": [
+      "index.html",
+      "_index-017a078c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/Home.vue"
+  },
+  "src/views/NumberGame.css": {
+    "file": "assets/NumberGame-b45e8b72.css",
+    "src": "src/views/NumberGame.css"
+  },
+  "src/views/NumberGame.vue": {
+    "css": [
+      "assets/NumberGame-b45e8b72.css"
+    ],
+    "file": "assets/NumberGame-c98bbb79.js",
+    "imports": [
+      "index.html",
+      "_index-017a078c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/NumberGame.vue"
+  },
+  "src/views/Page404.vue": {
+    "file": "assets/Page404-8f80235c.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/Page404.vue"
+  }
+}

@@ -24,9 +24,6 @@ export default createVuetify({
         themes: {
             light: {
                 colors: {
-                    primary: '#FDAD3D',
-                    secondary: '#f5f5f5',
-                    orange: '#FDAD3D'
                 }
             }
         }

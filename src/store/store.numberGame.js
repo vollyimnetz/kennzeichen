@@ -6,6 +6,8 @@ const getInitialState = () => {
         startedAt: window.localStorage.getItem('kennzeichen_numberGame_startedAt') || null,
         lastChange: window.localStorage.getItem('kennzeichen_numberGame_lastChange') || null,
     };
+    if(stateData.lastChange) stateData.lastChange = new Date(stateData.lastChange);
+    if(stateData.startedAt) stateData.startedAt = new Date(stateData.startedAt);
     return stateData;
 }
 
@@ -18,6 +20,7 @@ export const storeModule = {
     getters : {
         currentNumber: state => state.currentNumber,
         startedAt: state => state.startedAt,
+        lastChange: state => state.lastChange,
     },
     actions : {
         setNumber(context, number) {
@@ -33,13 +36,16 @@ export const storeModule = {
             number--;
             context.commit('setNumber', number);
         },
-        startGame(context,state) {
-            context.commit('setNumber', 0);
-            state.startedAt = new Date();
-            window.localStorage.setItem('kennzeichen_numberGame_startedAt', state.startedAt.toISOString());
+        startGame(context) {
+            context.commit('setNumber', 1);
+            context.commit('resetStartDate');
         }
     },
     mutations : {
+        resetStartDate(state) {
+            state.startedAt = new Date();
+            window.localStorage.setItem('kennzeichen_numberGame_startedAt', state.startedAt.toISOString());
+        },
         setNumber(state, number) {
             state.currentNumber = number;
             state.lastChange = new Date();

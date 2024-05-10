@@ -18,20 +18,17 @@
 </template>
 
 <script>
-import baseData from './kennzeichen.json';
+import kennzeichen from './kennzeichen.json';
 export default {
   name: 'KennzeichenList',
   data: () => ({
     search:'',
-    data: baseData
+    kennzeichen: kennzeichen.sort((a,b) => a.id.length - b.id.length )
   }),
   computed:{
-    orderedData() {
-      return this.data.sort((a,b) => a.id.length - b.id.length );
-    },
     searchResult() {
       if(this.search===null || this.search.length===0) return [];
-      return this.orderedData.filter(elem => {
+      return this.kennzeichen.filter(elem => {
         return elem.id.toUpperCase().indexOf( this.search.toUpperCase() ) > -1;
       })
     }
