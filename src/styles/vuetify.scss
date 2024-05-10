@@ -1,0 +1,68 @@
+body {
+    --v-theme-on-surface: 0,0,0;
+    //--v-high-emphasis-opacity: 20;
+    .bg-grey-lighten-4 { color:#000000aa !important; }
+
+    .v-input--density-default { --v-input-control-height: 48px; }
+
+    .v-theme--light {
+        --v-disabled-opacity: 0.65;
+    }
+}
+.v-data-table tr:hover td { background-color: rgba(0,0,0,0.03) !important; transform: background .5s ease; }
+
+body .v-container,
+body .v-container.fluid { max-width: $maxWidth; }
+
+
+//sticky do not work if we have layout with overflow hidden
+.v-layout { overflow: initial !important; }
+
+img { max-width: 100%; height: auto; }
+a { text-decoration: none; }
+p { margin-bottom: 1em; }
+ul { padding-left: 1.5em; }
+p:last-child{ margin-bottom: 0; }
+.scantype { width: 55vw; max-width: 140px;}
+.cursorPointer { cursor: pointer; }
+@media(max-width:$screenSmallFontSize) {
+    html.webapp { font-size: 12px; }
+}
+.v-application a:not(.v-btn) { color: rgb(var(--v-theme-primary)); }
+
+.v-alert .v-alert__icon.v-icon,
+.v-alert__dismissible .v-icon { color:#fff; }
+
+
+ul.style-chevron { margin: 0; padding: 0; list-style: none;
+    li { line-height: 1.2; padding: .3em 0 .3em 1em; position: relative;
+        &::before { content:"\F0142"; font-family: "Material Design Icons"; position: absolute; left:0; }
+    }
+}
+
+.v-btn { text-transform: none; box-shadow: none; letter-spacing: 0; }
+.v-tabs-bar__content .v-tab { text-transform: none; letter-spacing: 0; }
+.v-input--checkbox.checkboxOnTop{
+    .v-input__slot { align-items: flex-start; }
+    .v-label { margin-top:.1em; }
+}
+
+
+// disabled input fields
+.v-input--disabled:not(.v-input--switch, .useDefaultDisabled) { position: relative;
+    &::after { content: "\F033E"; font-family: "Material Design Icons"; display: block; position: absolute; top: -9px; right: 6px; background: #f0f0f0; width: 22px; height: 22px; text-align: center; color: #999; border-radius: 50%; font-size: 14px; letter-spacing: -1px; border: 1px solid #999; }
+    input,
+    textarea { color: rgba(0,0,0,.7); }
+}
+
+.v-data-table .v-table__wrapper > table > thead > tr > td,
+.v-data-table .v-table__wrapper > table > thead > tr th,
+.v-data-table .v-table__wrapper > table tbody > tr > td,
+.v-data-table .v-table__wrapper > table tbody > tr th { font-size: .875em; }
+.v-data-table>.v-table__wrapper>table>thead>tr>td { font-size: .875em; }
+
+
+.v-card-title { padding:16px 24px 10px; }
+
+
+.v-switch .v-switch__thumb--filled.bg-primary i.v-icon { color:#fff; }

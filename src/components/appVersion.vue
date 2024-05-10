@@ -1,6 +1,6 @@
 <template>
-    <v-btn small @click="doAppReload">
-        <span v-html="versionDate"></span> <v-icon small class="mx-2">mdi-autorenew</v-icon>
+    <v-btn size="small" @click="doAppReload">
+        <span v-html="versionDate"></span> <v-icon size="small" class="mx-2">mdi-autorenew</v-icon>
     </v-btn>
 </template>
 

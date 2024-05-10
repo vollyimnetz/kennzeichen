@@ -1,15 +1,13 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 
-Vue.use(Vuex)
+import { storeModule as collectGame } from './store.collectGame'
+import { storeModule as numberGame } from './store.numberGame'
 
-export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+
+const storeObj = {
+    strict: true,
+    modules: { collectGame,numberGame }
+};
+
+
+export default createStore(storeObj);

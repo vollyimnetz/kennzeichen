@@ -1,19 +1,12 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Kennzeichen from '../views/Kennzeichen.vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import routes from './routes'
+import pageClasses from './guard.pageClasses'
 
-Vue.use(VueRouter)
+const router = createRouter({
+    history: createWebHistory('/app/'),
+    routes
+});
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Kennzeichen
-  }
-]
+router.beforeEach(pageClasses);
 
-const router = new VueRouter({
-  routes
-})
-
-export default router
+export default router;

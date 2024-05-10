@@ -1,15 +1,12 @@
-import Vue from 'vue'
-import App from './App.vue'
-import './registerServiceWorker'
-import router from './router'
-import store from './store'
-import vuetify from './vuetify'
+import { createApp } from 'vue'
+import App from './App.vue';
+import { registerModules } from './modules';
 
-Vue.config.productionTip = false
+import './styles/index.scss';
 
-new Vue({
-  router,
-  store,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+const app = createApp(App);
+registerModules(app);
+app.mount('#app');
+console.log('init complete')
+
+export default app;

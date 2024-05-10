@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <v-app>
+  <v-app>
+    <v-layout>
       <v-main>
         <!--
         <div id="nav">
@@ -8,16 +8,14 @@
         </div>
         -->
         <router-view/>
-        <v-footer padless fixed dark>
-          <v-card class="flex" flat tile>
-            <v-card-text class="py-2 white--text text-center">
-              <app-version></app-version>
-            </v-card-text>
-          </v-card>
-        </v-footer>
       </v-main>
-    </v-app>
-  </div>
+    </v-layout>
+    <v-footer app theme="dark" class="px-0 AppFooter">
+      <v-row justify="center" no-gutters>
+        <app-version></app-version>
+      </v-row>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
@@ -56,11 +54,6 @@ export default {
     &.router-link-exact-active {
       color: #42b983;
     }
-  }
-}
-.kennzeichenWrap { margin-top:5vh; 
-  .v-input { max-width: 12em; margin:0 auto !important; 
-    input { text-align: center;}
   }
 }
 </style>
