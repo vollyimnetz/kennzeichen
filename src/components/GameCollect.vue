@@ -1,32 +1,40 @@
 <template>
   <div>
     <h1>Gesammelte Kennzeichen</h1>
-    <h5>gestartet am {{startedAt}}</h5>
-    <v-list>
-      <v-list-item-group>
-        <v-list-item v-for="item in alreadyFound" :key="item.id">
-          <v-list-item-content>
-            <v-list-item-title>{{item.kennzeichen.id}}</v-list-item-title>
-            <v-list-item-subtitle>{{item.kennzeichen.location}}</v-list-item-subtitle>
-            <v-list-item-subtitle>{{item.kennzeichen.state}}</v-list-item-subtitle>
-            <v-list-item-subtitle>{{item.kennzeichen.district}}</v-list-item-subtitle>
-            <v-list-item-subtitle>{{item.date}}</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list-item-group>
-    </v-list>
+    <p class="mb-10">Sammele alle Kennzeichen.</p>
+    <div v-if="!startedAt">
+      <v-btn @click="startGame" color="primary" >Spiel starten</v-btn>
+    </div>
+    <div v-else>
+      <h5>gestartet am {{dateHelper.format(startedAt)}}</h5>
+
+      <v-alert color="info" v-if="alreadyFound.length===0">noch keine Kennzeichen gefunden</v-alert>
+      <v-list v-else>
+        <GameCollectItem v-for="item in alreadyFound" :key="item.id" :item="item"></GameCollectItem>
+      </v-list>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
+import { dateHelper } from './date.helper';
+import GameCollectItem from './GameCollectItem.vue';
 export default {
-
+  components: { GameCollectItem },
+  data: () => ({
+    dateHelper
+  }),
   computed: {
     ...mapGetters({
-      alreadyFound: 'sammeln/alreadyFound',
-      startedAt: 'sammeln/startedAt',
+      alreadyFound: 'collectGame/alreadyFound',
+      startedAt: 'collectGame/startedAt',
     })
+  },
+  methods: {
+    startGame() {
+      this.$store.dispatch('collectGame/startGame');
+    }
   }
 }
 </script>

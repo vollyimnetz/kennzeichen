@@ -1,7 +1,8 @@
 <template>
   <v-app>
+    <AppNavigation></AppNavigation>
     <v-layout>
-      <v-main>
+      <v-main class="pt-10 mt-10">
         <!--
         <div id="nav">
           <router-link to="/">Home</router-link>
@@ -12,17 +13,18 @@
     </v-layout>
     <v-footer app theme="dark" class="px-0 AppFooter">
       <v-row justify="center" no-gutters>
-        <app-version></app-version>
+        <AppVersion></AppVersion>
       </v-row>
     </v-footer>
   </v-app>
 </template>
 
 <script>
-import appVersion from './components/appVersion.vue';
+import AppNavigation from './AppNavigation.vue';
+import AppVersion from './components/appVersion.vue';
 export default {
   components:{
-    appVersion
+    AppVersion, AppNavigation
   }
 }
 </script>

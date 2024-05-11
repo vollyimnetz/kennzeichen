@@ -9,6 +9,9 @@ const getInitialState = () => {
     if(stateData.alreadyFound) {
         try {
             stateData.alreadyFound = JSON.parse(stateData.alreadyFound);
+            stateData.alreadyFound.forEach(item => {
+                item.foundAt = new Date(item.foundAt);
+            });
         } catch(e) {
             stateData.alreadyFound = [];
         }
@@ -28,6 +31,7 @@ export const storeModule = {
     getters : {
         alreadyFound: state => state.alreadyFound,
         startedAt: state => state.startedAt,
+        isCollected: state => kennzeichen => state.alreadyFound.some(item => item.kennzeichen === kennzeichen),
     },
     actions : {
         resetState({ commit }) {
@@ -38,6 +42,7 @@ export const storeModule = {
             commit('add', value);
         },
         remove({ commit }, value) {
+            console.log('action remove', value)
             commit('remove', value);
         },
         startGame(context) {
@@ -58,6 +63,7 @@ export const storeModule = {
             window.localStorage.setItem('kennzeichen_collectGame_alreadyFound', JSON.stringify(state.alreadyFound));
         },
         remove(state, value) {
+            console.log('mutatation remove', value)
             let index = state.alreadyFound.findIndex(item => item.kennzeichen === value);
             if(index > -1) {
                 state.alreadyFound.splice(index, 1);

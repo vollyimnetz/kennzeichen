@@ -11,9 +11,6 @@ body {
 }
 .v-data-table tr:hover td { background-color: rgba(0,0,0,0.03) !important; transform: background .5s ease; }
 
-body .v-container,
-body .v-container.fluid { max-width: $maxWidth; }
-
 
 //sticky do not work if we have layout with overflow hidden
 .v-layout { overflow: initial !important; }
@@ -25,9 +22,6 @@ ul { padding-left: 1.5em; }
 p:last-child{ margin-bottom: 0; }
 .scantype { width: 55vw; max-width: 140px;}
 .cursorPointer { cursor: pointer; }
-@media(max-width:$screenSmallFontSize) {
-    html.webapp { font-size: 12px; }
-}
 .v-application a:not(.v-btn) { color: rgb(var(--v-theme-primary)); }
 
 .v-alert .v-alert__icon.v-icon,

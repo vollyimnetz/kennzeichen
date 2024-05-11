@@ -1,7 +1,4 @@
 <template>
-  <v-app-bar>
-    heir
-  </v-app-bar>
   <GameNumbers></GameNumbers>
 </template>
 

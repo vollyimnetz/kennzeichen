@@ -6,7 +6,7 @@ import { storeModule as numberGame } from './store.numberGame'
 
 const storeObj = {
     strict: true,
-    modules: { collectGame,numberGame }
+    modules: { collectGame, numberGame }
 };
 
 

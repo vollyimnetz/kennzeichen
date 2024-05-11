@@ -24,6 +24,7 @@ export default createVuetify({
         themes: {
             light: {
                 colors: {
+                    secondary: '#b0bec5',
                 }
             }
         }

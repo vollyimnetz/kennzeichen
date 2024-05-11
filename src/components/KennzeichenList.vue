@@ -5,22 +5,16 @@
     <v-text-field v-model="search" placeholder="Kennzeichen eingeben" clearable @input="makeUppercase"></v-text-field>
 
     <v-slide-y-transition class="list-unstyled" group tag="ul">
-      <li v-for="item in searchResult" :key="item.id">
-        <h1>{{item.id}}</h1>
-        <div>{{item.location}}</div>
-        <div>{{item.state}}</div>
-        <div>{{item.district}}</div>
-        <v-btn @click="collect(item)">sammeln</v-btn>
-      </li>
+      <KennzeichenListItem v-for="item in searchResult" :key="item.id" :item="item"></KennzeichenListItem>
     </v-slide-y-transition>
-
   </div>
 </template>
 
 <script>
+import KennzeichenListItem from './KennzeichenListItem.vue';
 import kennzeichen from './kennzeichen.json';
 export default {
-  name: 'KennzeichenList',
+  components: { KennzeichenListItem },
   data: () => ({
     search:'',
     kennzeichen: kennzeichen.sort((a,b) => a.id.length - b.id.length )
@@ -37,9 +31,6 @@ export default {
     makeUppercase() {
       if(this.search===null) return;
       this.search = this.search.toUpperCase();
-    },
-    collect(item) {
-      this.$store.commit('collectGame/add', item);
     }
   }
 }
