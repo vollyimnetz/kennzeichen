@@ -7,23 +7,23 @@
     "file": "assets/VChip-40e10506.css",
     "src": "VChip.css"
   },
-  "_VAvatar-f6306af4.js": {
+  "_VAvatar-b9c3ca50.js": {
     "css": [
       "assets/VAvatar-2a522f66.css"
     ],
-    "file": "assets/VAvatar-f6306af4.js",
+    "file": "assets/VAvatar-b9c3ca50.js",
     "imports": [
       "index.html"
     ]
   },
-  "_VChip-913b924c.js": {
+  "_VChip-10283fc9.js": {
     "css": [
       "assets/VChip-40e10506.css"
     ],
-    "file": "assets/VChip-913b924c.js",
+    "file": "assets/VChip-10283fc9.js",
     "imports": [
       "index.html",
-      "_VAvatar-f6306af4.js"
+      "_VAvatar-b9c3ca50.js"
     ]
   },
   "_date.helper-8b7b65f2.js": {
@@ -33,7 +33,7 @@
     "file": "assets/kennzeichen-0378dd8e.js"
   },
   "index.css": {
-    "file": "assets/index-f92382be.css",
+    "file": "assets/index-e18ea8fa.css",
     "src": "index.css"
   },
   "index.html": {
@@ -41,7 +41,7 @@
       "assets/materialdesignicons-webfont-662fefa8.woff2"
     ],
     "css": [
-      "assets/index-f92382be.css"
+      "assets/index-e18ea8fa.css"
     ],
     "dynamicImports": [
       "src/views/Home.vue",
@@ -49,7 +49,7 @@
       "src/views/CollectGame.vue",
       "src/views/Page404.vue"
     ],
-    "file": "assets/index-d0b424d6.js",
+    "file": "assets/index-dc33e591.js",
     "isEntry": true,
     "src": "index.html"
   },
@@ -65,12 +65,12 @@
     "css": [
       "assets/CollectGame-6a6bc859.css"
     ],
-    "file": "assets/CollectGame-eeac204f.js",
+    "file": "assets/CollectGame-23800f82.js",
     "imports": [
       "index.html",
       "_date.helper-8b7b65f2.js",
       "_kennzeichen-0378dd8e.js",
-      "_VAvatar-f6306af4.js"
+      "_VAvatar-b9c3ca50.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/CollectGame.vue"
@@ -83,29 +83,29 @@
     "css": [
       "assets/Home-53cfef57.css"
     ],
-    "file": "assets/Home-573f4fd9.js",
+    "file": "assets/Home-a7895030.js",
     "imports": [
       "index.html",
-      "_VChip-913b924c.js",
+      "_VChip-10283fc9.js",
       "_kennzeichen-0378dd8e.js",
-      "_VAvatar-f6306af4.js"
+      "_VAvatar-b9c3ca50.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/Home.vue"
   },
   "src/views/NumberGame.vue": {
-    "file": "assets/NumberGame-3c9af2d5.js",
+    "file": "assets/NumberGame-de297ec1.js",
     "imports": [
       "index.html",
       "_date.helper-8b7b65f2.js",
-      "_VChip-913b924c.js",
-      "_VAvatar-f6306af4.js"
+      "_VChip-10283fc9.js",
+      "_VAvatar-b9c3ca50.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/NumberGame.vue"
   },
   "src/views/Page404.vue": {
-    "file": "assets/Page404-a34e9847.js",
+    "file": "assets/Page404-1eaac51c.js",
     "imports": [
       "index.html"
     ],

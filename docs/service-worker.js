@@ -1534,9 +1534,9 @@ function be(r, e) {
 function Re(r) {
   V().setCatchHandler(r);
 }
-importScripts("./third-party/workbox-v6.1.5/workbox-sw.js");
-workbox.setConfig({ modulePathPrefix: "/kennzeichen/third-party/workbox-v6.1.5" });
+importScripts("./third-party/workbox-v7.0.0/workbox-sw.js");
+workbox.setConfig({ modulePathPrefix: "/kennzeichen/third-party/workbox-v7.0.0" });
 workbox.core.setCacheNameDetails({ prefix: "kennzeichen" });
 workbox.core.skipWaiting();
-be([{"revision":null,"url":"assets/CollectGame-6a6bc859.css"},{"revision":null,"url":"assets/CollectGame-eeac204f.js"},{"revision":null,"url":"assets/date.helper-8b7b65f2.js"},{"revision":null,"url":"assets/Home-53cfef57.css"},{"revision":null,"url":"assets/Home-573f4fd9.js"},{"revision":null,"url":"assets/index-d0b424d6.js"},{"revision":null,"url":"assets/index-f92382be.css"},{"revision":null,"url":"assets/kennzeichen-0378dd8e.js"},{"revision":null,"url":"assets/NumberGame-3c9af2d5.js"},{"revision":null,"url":"assets/Page404-a34e9847.js"},{"revision":null,"url":"assets/VAvatar-2a522f66.css"},{"revision":null,"url":"assets/VAvatar-f6306af4.js"},{"revision":null,"url":"assets/VChip-40e10506.css"},{"revision":null,"url":"assets/VChip-913b924c.js"},{"revision":"2d5885f59daa35a4b3db74460e8e4f58","url":"index.html"},{"revision":"38013143dc2183340ede8bc1c5124507","url":"registerSW.js"},{"revision":"42861abe1be6b857815c766150fc6fd9","url":"manifest.webmanifest"}]);
+be([{"revision":null,"url":"assets/CollectGame-23800f82.js"},{"revision":null,"url":"assets/CollectGame-6a6bc859.css"},{"revision":null,"url":"assets/date.helper-8b7b65f2.js"},{"revision":null,"url":"assets/Home-53cfef57.css"},{"revision":null,"url":"assets/Home-a7895030.js"},{"revision":null,"url":"assets/index-dc33e591.js"},{"revision":null,"url":"assets/index-e18ea8fa.css"},{"revision":null,"url":"assets/kennzeichen-0378dd8e.js"},{"revision":null,"url":"assets/NumberGame-de297ec1.js"},{"revision":null,"url":"assets/Page404-1eaac51c.js"},{"revision":null,"url":"assets/VAvatar-2a522f66.css"},{"revision":null,"url":"assets/VAvatar-b9c3ca50.js"},{"revision":null,"url":"assets/VChip-10283fc9.js"},{"revision":null,"url":"assets/VChip-40e10506.css"},{"revision":"99eecb707597855cd07f4e76896edf12","url":"index.html"},{"revision":"aa71e77eee8c327d4f32b109bf7baebe","url":"registerSW.js"},{"revision":"ec27b49b4adc3e914c59edea44f227ef","url":"manifest.webmanifest"}]);
 Re(async ({ event: r }) => r.request.destination === "document" ? ye("./index.html") : Response.error());

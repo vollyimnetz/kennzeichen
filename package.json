@@ -5,7 +5,7 @@
   "author": "Volkmar Kantor",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/ && npm run sw-copy-lib",
+    "build": "vite build --base=/kennzeichen/ && npm run sw-copy-lib",
     "sw-copy-lib": "workbox copyLibraries ./docs/third-party/"
   },
   "dependencies": {
