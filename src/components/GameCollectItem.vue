@@ -1,9 +1,9 @@
 <template>
     <v-list-item>
-        <v-list-item-title>{{kennzeichen.id}}</v-list-item-title>
+        <v-list-item-title><strong>{{kennzeichen.id}}</strong></v-list-item-title>
         <v-list-item-subtitle>{{kennzeichen.location}}, {{kennzeichen.state}}, {{kennzeichen.district}}</v-list-item-subtitle>
         <v-list-item-subtitle><i>{{dateOutput}}</i></v-list-item-subtitle>
-        <v-btn class="mt-5" @click="removeItem" color="secondary" size="small"><v-icon start>mdi-close</v-icon> aus Liste entfernen</v-btn>
+        <v-btn class="mt-2" @click="removeItem" color="secondary" size="small"><v-icon start>mdi-close</v-icon> aus Liste entfernen</v-btn>
     </v-list-item>
 </template>
 
@@ -26,8 +26,9 @@ export default {
     },
   },
   methods: {
-    removeItem() {
-      this.$store.dispatch('collectGame/remove', this.item.kennzeichen);
+    async removeItem() {
+      if(await window.confirm('Eintrag wirklich entfernen?'))
+        this.$store.dispatch('collectGame/remove', this.item.kennzeichen);
     }
   },
 }

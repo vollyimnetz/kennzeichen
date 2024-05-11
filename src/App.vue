@@ -2,7 +2,7 @@
   <v-app>
     <AppNavigation></AppNavigation>
     <v-layout>
-      <v-main class="pt-10 mt-10">
+      <v-main class="pt-5 mt-10">
         <!--
         <div id="nav">
           <router-link to="/">Home</router-link>

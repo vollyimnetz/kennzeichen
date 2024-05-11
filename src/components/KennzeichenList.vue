@@ -38,7 +38,7 @@ export default {
 
 
 <style lang="scss">
-.kennzeichenWrap { margin-top:5vh;
+.kennzeichenWrap {
   .v-input { max-width: 16em; margin:0 auto !important;
     input { text-align: center;}
   }

@@ -4,7 +4,7 @@
     <v-toolbar class="mainToolbar" density="compact" color="white">
       <v-spacer></v-spacer>
       <v-toolbar-items>
-          <v-btn :href="$router.resolve({ name:'home' }).href" color="primary" variant="text">
+          <v-btn @click="$router.push({ name:'home' })" color="primary" variant="text">
             zurück
           </v-btn>
       </v-toolbar-items>
