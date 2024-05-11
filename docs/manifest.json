@@ -7,23 +7,23 @@
     "file": "assets/VChip-40e10506.css",
     "src": "VChip.css"
   },
-  "_VAvatar-b9c3ca50.js": {
+  "_VAvatar-b3d3bb1c.js": {
     "css": [
       "assets/VAvatar-2a522f66.css"
     ],
-    "file": "assets/VAvatar-b9c3ca50.js",
+    "file": "assets/VAvatar-b3d3bb1c.js",
     "imports": [
       "index.html"
     ]
   },
-  "_VChip-10283fc9.js": {
+  "_VChip-d14cca52.js": {
     "css": [
       "assets/VChip-40e10506.css"
     ],
-    "file": "assets/VChip-10283fc9.js",
+    "file": "assets/VChip-d14cca52.js",
     "imports": [
       "index.html",
-      "_VAvatar-b9c3ca50.js"
+      "_VAvatar-b3d3bb1c.js"
     ]
   },
   "_date.helper-8b7b65f2.js": {
@@ -49,7 +49,7 @@
       "src/views/CollectGame.vue",
       "src/views/Page404.vue"
     ],
-    "file": "assets/index-dc33e591.js",
+    "file": "assets/index-f6684860.js",
     "isEntry": true,
     "src": "index.html"
   },
@@ -65,12 +65,12 @@
     "css": [
       "assets/CollectGame-6a6bc859.css"
     ],
-    "file": "assets/CollectGame-23800f82.js",
+    "file": "assets/CollectGame-6c3fea4d.js",
     "imports": [
       "index.html",
       "_date.helper-8b7b65f2.js",
       "_kennzeichen-0378dd8e.js",
-      "_VAvatar-b9c3ca50.js"
+      "_VAvatar-b3d3bb1c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/CollectGame.vue"
@@ -83,29 +83,29 @@
     "css": [
       "assets/Home-53cfef57.css"
     ],
-    "file": "assets/Home-a7895030.js",
+    "file": "assets/Home-b7afb75a.js",
     "imports": [
       "index.html",
-      "_VChip-10283fc9.js",
+      "_VChip-d14cca52.js",
       "_kennzeichen-0378dd8e.js",
-      "_VAvatar-b9c3ca50.js"
+      "_VAvatar-b3d3bb1c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/Home.vue"
   },
   "src/views/NumberGame.vue": {
-    "file": "assets/NumberGame-de297ec1.js",
+    "file": "assets/NumberGame-2f17360a.js",
     "imports": [
       "index.html",
       "_date.helper-8b7b65f2.js",
-      "_VChip-10283fc9.js",
-      "_VAvatar-b9c3ca50.js"
+      "_VChip-d14cca52.js",
+      "_VAvatar-b3d3bb1c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/NumberGame.vue"
   },
   "src/views/Page404.vue": {
-    "file": "assets/Page404-1eaac51c.js",
+    "file": "assets/Page404-e0207144.js",
     "imports": [
       "index.html"
     ],

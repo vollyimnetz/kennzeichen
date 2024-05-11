@@ -3,7 +3,7 @@ import routes from './routes'
 import pageClasses from './guard.pageClasses'
 
 const router = createRouter({
-    history: createWebHistory('/app/'),
+    history: createWebHistory('/kennzeichen/'),
     routes
 });
 
