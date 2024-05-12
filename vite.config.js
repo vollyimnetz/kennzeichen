@@ -75,6 +75,24 @@ export default defineConfig({
                         type: 'image/png'
                     },
                 ],
+                screenshots: [
+                    {
+                        src: 'staticAssets/screenshots/desktop-screenshot-01.png',
+                        sizes: '2160x1200',
+                        type: 'image/png',
+                        form_factor: 'wide',
+                    },
+                    {
+                        src: 'staticAssets/screenshots/desktop-screenshot-02.png',
+                        sizes: '2160x1200',
+                        type: 'image/png',
+                    },
+                    {
+                        src: 'staticAssets/screenshots/desktop-screenshot-03.png',
+                        sizes: '2160x1200',
+                        type: 'image/png',
+                    },
+                ],
                 lang: "de",
                 start_url: ".",
             },
