@@ -3,11 +3,11 @@
     "file": "assets/VChip-7f13cd89.css",
     "src": "VChip.css"
   },
-  "_VChip-c51e94ca.js": {
+  "_VChip-2c306250.js": {
     "css": [
       "assets/VChip-7f13cd89.css"
     ],
-    "file": "assets/VChip-c51e94ca.js",
+    "file": "assets/VChip-2c306250.js",
     "imports": [
       "index.html"
     ]
@@ -35,7 +35,7 @@
       "src/views/CollectGame.vue",
       "src/views/Page404.vue"
     ],
-    "file": "assets/index-a684dce0.js",
+    "file": "assets/index-845cb4ce.js",
     "isEntry": true,
     "src": "index.html"
   },
@@ -51,12 +51,12 @@
     "css": [
       "assets/CollectGame-fe94e988.css"
     ],
-    "file": "assets/CollectGame-2ab86e1c.js",
+    "file": "assets/CollectGame-3715e220.js",
     "imports": [
       "index.html",
       "_date.helper-8b7b65f2.js",
       "_kennzeichen-5beb0ec6.js",
-      "_VChip-c51e94ca.js"
+      "_VChip-2c306250.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/CollectGame.vue"
@@ -69,27 +69,27 @@
     "css": [
       "assets/Home-007296b8.css"
     ],
-    "file": "assets/Home-4894f9d2.js",
+    "file": "assets/Home-da105f97.js",
     "imports": [
       "index.html",
-      "_VChip-c51e94ca.js",
+      "_VChip-2c306250.js",
       "_kennzeichen-5beb0ec6.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/Home.vue"
   },
   "src/views/NumberGame.vue": {
-    "file": "assets/NumberGame-d27052eb.js",
+    "file": "assets/NumberGame-98601259.js",
     "imports": [
       "index.html",
       "_date.helper-8b7b65f2.js",
-      "_VChip-c51e94ca.js"
+      "_VChip-2c306250.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/NumberGame.vue"
   },
   "src/views/Page404.vue": {
-    "file": "assets/Page404-64736483.js",
+    "file": "assets/Page404-dd145173.js",
     "imports": [
       "index.html"
     ],
