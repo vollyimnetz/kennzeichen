@@ -1,7 +1,7 @@
 <template>
     <v-list-item>
-        <v-list-item-title><strong>{{kennzeichen.id}}</strong></v-list-item-title>
-        <v-list-item-subtitle>{{kennzeichen.location}}, {{kennzeichen.state}}, {{kennzeichen.district}}</v-list-item-subtitle>
+        <h2>{{kennzeichen.id}}</h2>
+        <v-list-item-title><span v-html="kennzeichen.locationHtml"></span>, {{kennzeichen.state}}</v-list-item-title>
         <v-list-item-subtitle><i>{{dateOutput}}</i></v-list-item-subtitle>
         <v-btn class="mt-2" @click="removeItem" color="secondary" size="small"><v-icon start>mdi-close</v-icon> aus Liste entfernen</v-btn>
     </v-list-item>
