@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import routes from './routes'
 import pageClasses from './guard.pageClasses'
 
 const router = createRouter({
-    history: createWebHistory('/kennzeichen/'),
+    history: createWebHashHistory('/kennzeichen/'),
     routes
 });
 

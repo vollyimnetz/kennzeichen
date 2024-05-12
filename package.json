@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/kennzeichen/ && npm run sw-copy-lib",
-    "sw-copy-lib": "workbox copyLibraries ./docs/third-party/"
+    "sw-copy-lib": "workbox copyLibraries ./docs/third-party/",
+    "favicons": "real-favicon generate favicons/favicon.settings.json favicons/generated/faviconData.json favicons/generated"
   },
   "dependencies": {
     "@mdi/font": "^7.2.96",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.3.4",
+    "cli-real-favicon": "^0.0.8",
     "sass": "^1.51.0",
     "unplugin-fonts": "^1.0.3",
     "vite": "^4.0.3",

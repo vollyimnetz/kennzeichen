@@ -52,30 +52,25 @@ export default defineConfig({
                 background_color: '#ffffff',
                 theme_color: '#4DBA87',
                 icons: [
-                    {//ios
-                        src: 'staticAssets/icons/icon_1024x1024.png',
-                        sizes: '1024x1024',
-                        type: 'image/png',
-                    },
                     {//android
-                        src: 'staticAssets/icons/icon_512x512-maskable.png',
+                        src: 'staticAssets/icons/android-chrome-512x512.png',
                         sizes: '512x512',
                         type: 'image/png',
                         purpose: 'maskable',
                     },
                     {//android
-                        src: 'staticAssets/icons/icon_192x192-maskable.png',
+                        src: 'staticAssets/icons/android-chrome-192x192.png',
                         sizes: '192x192',
                         type: 'image/png',
                         purpose: 'maskable',
                     },
                     {
-                        src: 'staticAssets/icons/icon_512x512.png',
+                        src: 'staticAssets/icons/android-chrome-512x512.png',
                         sizes: '512x512',
                         type: 'image/png'
                     },
                     {
-                        src: 'staticAssets/icons/icon_192x192.png',
+                        src: 'staticAssets/icons/android-chrome-192x192.png',
                         sizes: '192x192',
                         type: 'image/png'
                     },
