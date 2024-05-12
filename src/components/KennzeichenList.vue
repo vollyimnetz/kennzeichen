@@ -5,7 +5,7 @@
     <v-text-field v-model="search" placeholder="Kennzeichen eingeben" clearable @input="makeUppercase"></v-text-field>
 
     <v-slide-y-transition class="list-unstyled" group tag="ul">
-      <KennzeichenListItem v-for="item in searchResult" :key="item.id" :item="item"></KennzeichenListItem>
+      <KennzeichenListItem v-for="item in searchResult" :key="item.id" :item="item" @collect="search=''"></KennzeichenListItem>
     </v-slide-y-transition>
   </div>
 </template>

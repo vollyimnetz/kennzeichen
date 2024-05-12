@@ -13,6 +13,7 @@ export default {
   props: {
     item: { type: Object, required: true }
   },
+  emits: ['collect'],
   data: () => ({
   }),
   computed:{
@@ -21,8 +22,9 @@ export default {
     }
   },
   methods: {
-    collect(item) {
-      this.$store.dispatch('collectGame/add', item.id);
+    async collect(item) {
+      await this.$store.dispatch('collectGame/add', item.id);
+      this.$emit('collect');
     },
   }
 }
