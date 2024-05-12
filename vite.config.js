@@ -45,7 +45,7 @@ export default defineConfig({
             useCredentials: true,//for manifest header tag
             maximumFileSizeToCacheInBytes: 3000,
             manifest: {
-                id: '/kennzeichen/',//to match the start id
+                //id: '/kennzeichen/',//to match the start id
                 name: 'Kennzeichen',
                 short_name: 'Kennzeichen',
                 description: 'Kennzeichen ist eine kleine Webapp um zu deutschen Autokennzeichen den Ort zu finden.',
