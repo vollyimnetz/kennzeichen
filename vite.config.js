@@ -7,15 +7,15 @@ import { VitePWA } from 'vite-plugin-pwa'
 import vue from '@vitejs/plugin-vue'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import ViteFonts from 'unplugin-fonts/vite'
+import settings from './settings.json';
 
 
-const path = require('path');
 let userSettings = null;
 try {
-    userSettings = require('./settings');
+    userSettings = settings;
 } catch(error) {
     if(process.env.NODE_ENV === 'production') {
-        userSettings = { proxyserver:'anything' }//not used in production
+        userSettings = { proxyHost:'anything' }//not used in production
     } else {
         console.error('ACHTUNG Die settings.js Datei ist nicht korrekt gesetzt. Guck dir die settings.example.js Datei an.');
         process.exit()
@@ -135,7 +135,7 @@ export default defineConfig({
         proxy: {
             /*/ START for testing only
             '/api/user': {
-                target: userSettings.proxyserver,
+                target: userSettings.proxyHost,
                 secure: true,
                 changeOrigin: true,
                 ws: true,
@@ -143,7 +143,7 @@ export default defineConfig({
             },
             // END */
             '/api': {
-                target: userSettings.proxyserver,
+                target: userSettings.proxyHost,
                 secure: false,
                 changeOrigin: true,
                 ws: true,

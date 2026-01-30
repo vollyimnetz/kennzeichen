@@ -1,0 +1,141 @@
+{
+  "_VAlert-Dgyt9xAk.js": {
+    "file": "assets/VAlert-Dgyt9xAk.js",
+    "name": "VAlert",
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/VAlert-Qkf0eDNA.css"
+    ]
+  },
+  "_VAlert-Qkf0eDNA.css": {
+    "file": "assets/VAlert-Qkf0eDNA.css",
+    "src": "_VAlert-Qkf0eDNA.css"
+  },
+  "_VChip-BBW9Skeu.css": {
+    "file": "assets/VChip-BBW9Skeu.css",
+    "src": "_VChip-BBW9Skeu.css"
+  },
+  "_VChip-WGfWN0_W.js": {
+    "file": "assets/VChip-WGfWN0_W.js",
+    "name": "VChip",
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/VChip-BBW9Skeu.css"
+    ]
+  },
+  "_date.helper-dvId0QkD.js": {
+    "file": "assets/date.helper-dvId0QkD.js",
+    "name": "date.helper"
+  },
+  "_forwardRefs-D50KAhW3.js": {
+    "file": "assets/forwardRefs-D50KAhW3.js",
+    "name": "forwardRefs",
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/forwardRefs-DE_hTVlJ.css"
+    ]
+  },
+  "_forwardRefs-DE_hTVlJ.css": {
+    "file": "assets/forwardRefs-DE_hTVlJ.css",
+    "src": "_forwardRefs-DE_hTVlJ.css"
+  },
+  "_kennzeichen-DRy4gHu4.js": {
+    "file": "assets/kennzeichen-DRy4gHu4.js",
+    "name": "kennzeichen"
+  },
+  "index.html": {
+    "file": "assets/index-B6QETzm4.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/views/Home.vue",
+      "src/views/NumberGame.vue",
+      "src/views/CollectGame.vue",
+      "src/views/Page404.vue",
+      "src/views/Backup.vue"
+    ],
+    "css": [
+      "assets/index-DM5xAzpS.css"
+    ],
+    "assets": [
+      "assets/materialdesignicons-webfont-Dp5v-WZN.woff2"
+    ]
+  },
+  "node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2": {
+    "file": "assets/materialdesignicons-webfont-Dp5v-WZN.woff2",
+    "src": "node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2"
+  },
+  "src/views/Backup.vue": {
+    "file": "assets/Backup-DLIy_X1y.js",
+    "name": "Backup",
+    "src": "src/views/Backup.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_VAlert-Dgyt9xAk.js",
+      "_forwardRefs-D50KAhW3.js",
+      "_VChip-WGfWN0_W.js"
+    ],
+    "css": [
+      "assets/Backup-Dwzvf-gD.css"
+    ]
+  },
+  "src/views/CollectGame.vue": {
+    "file": "assets/CollectGame-CUXZyQH4.js",
+    "name": "CollectGame",
+    "src": "src/views/CollectGame.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_date.helper-dvId0QkD.js",
+      "_kennzeichen-DRy4gHu4.js",
+      "_VChip-WGfWN0_W.js",
+      "_VAlert-Dgyt9xAk.js"
+    ],
+    "css": [
+      "assets/CollectGame-BnX3EDXn.css"
+    ]
+  },
+  "src/views/Home.vue": {
+    "file": "assets/Home-BqL7OLbJ.js",
+    "name": "Home",
+    "src": "src/views/Home.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_VChip-WGfWN0_W.js",
+      "_kennzeichen-DRy4gHu4.js",
+      "_forwardRefs-D50KAhW3.js"
+    ],
+    "css": [
+      "assets/Home-CkfNd37Q.css"
+    ]
+  },
+  "src/views/NumberGame.vue": {
+    "file": "assets/NumberGame-5k5duxFM.js",
+    "name": "NumberGame",
+    "src": "src/views/NumberGame.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_date.helper-dvId0QkD.js",
+      "_VChip-WGfWN0_W.js"
+    ]
+  },
+  "src/views/Page404.vue": {
+    "file": "assets/Page404-LKgyw_xB.js",
+    "name": "Page404",
+    "src": "src/views/Page404.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  }
+}

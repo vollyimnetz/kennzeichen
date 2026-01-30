@@ -15,7 +15,9 @@
     <v-footer app theme="dark" class="px-0 AppFooter">
       <v-row justify="center" no-gutters>
         <AppVersion></AppVersion>
+        <v-btn @click="$router.push({ name: 'backup' })" size="small">Backup</v-btn>
       </v-row>
+
     </v-footer>
   </v-app>
 </template>

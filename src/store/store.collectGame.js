@@ -1,3 +1,4 @@
+import { test } from "vitest";
 
 // lets create the default state
 const getInitialState = () => {
@@ -47,9 +48,39 @@ export const storeModule = {
         },
         startGame(context) {
             context.commit('resetStartDate');
+        },
+        getBackup(context) {
+            return {
+                alreadyFound: context.state.alreadyFound.map(item => ({
+                    kennzeichen: item.kennzeichen,
+                    foundAt: item.foundAt.toISOString(),
+                })),
+                startedAt: context.state.startedAt ? context.state.startedAt.toISOString() : null,
+            };
+        },
+        restoreBackup(context, backupData) {
+            context.commit('restoreBackup', backupData);
         }
     },
     mutations : {
+        restoreBackup(state, backupData) {
+            if(backupData.alreadyFound !== undefined && Array.isArray(backupData.alreadyFound)) {
+                let alreadyFound = backupData.alreadyFound.map(item => ({
+                    kennzeichen: item.kennzeichen,
+                    foundAt: new Date(item.foundAt),
+                }));
+                state.alreadyFound = alreadyFound;
+                window.localStorage.setItem('kennzeichen_collectGame_alreadyFound', JSON.stringify(alreadyFound));
+
+                state.startedAt = getOldestDate(state.alreadyFound);
+                window.localStorage.setItem('kennzeichen_collectGame_startedAt', state.startedAt.toISOString());
+            }
+            if(backupData.startedAt) {
+                let startedAt = new Date(backupData.startedAt);
+                state.startedAt = startedAt;
+                window.localStorage.setItem('kennzeichen_collectGame_startedAt', startedAt.toISOString());
+            }
+        },
         resetAlreadyFound(state) {
             state.alreadyFound = [];
             window.localStorage.setItem('kennzeichen_collectGame_alreadyFound', JSON.stringify([]));
@@ -61,6 +92,11 @@ export const storeModule = {
         add(state, value) {
             state.alreadyFound.push({kennzeichen: value, foundAt: new Date()});
             window.localStorage.setItem('kennzeichen_collectGame_alreadyFound', JSON.stringify(state.alreadyFound));
+
+            if(state.startedAt) return;
+
+            state.startedAt = getOldestDate(state.alreadyFound);
+            window.localStorage.setItem('kennzeichen_collectGame_startedAt', state.startedAt.toISOString());
         },
         remove(state, value) {
             console.log('mutatation remove', value)
@@ -72,3 +108,12 @@ export const storeModule = {
         }
     },
 };
+
+const getOldestDate = (entries) => {
+    if(entries.length === 0) return null;
+    let oldest = entries.reduce((oldest, item) => {
+        return item.foundAt < oldest.foundAt ? item : oldest;
+    }, entries[0]);
+
+    return oldest.foundAt;
+}
