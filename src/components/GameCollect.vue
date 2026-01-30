@@ -15,12 +15,8 @@
 
       <v-alert color="info" v-if="alreadyFound.length===0">noch keine Kennzeichen gefunden</v-alert>
       <v-list v-else>
-        <v-virtual-scroll :items="alreadyFoundDesc">
-          <template #default="{ item }">
-            <GameCollectItem :item="item"></GameCollectItem>
-          </template>
-        </v-virtual-scroll>
-        <!--<GameCollectItem class="my-5" v-for="item in alreadyFoundDesc" :key="item.kennzeichen" :item="item"></GameCollectItem>-->
+        <GameCollectItem class="my-5" v-for="item in readMoreEntries" :key="item.kennzeichen" :item="item"></GameCollectItem>
+        <v-btn v-if="readMoreEntries.length < alreadyFoundDesc.length" @click="readMore" class="my-5" color="primary" size="small"><v-icon start>mdi-arrow-down-bold-circle</v-icon>Mehr laden</v-btn>
       </v-list>
 
       <v-btn @click="restart" class="mt-10" color="secondary" size="small"><v-icon start>mdi-refresh</v-icon>Spiel neu starten</v-btn>
@@ -37,7 +33,9 @@ export default {
   components: { GameCollectItem },
   data: () => ({
     dateHelper,
-    kennzeichen
+    kennzeichen,
+    pageSize: 50,
+    currentPage: 1,
   }),
   computed: {
     ...mapGetters({
@@ -46,8 +44,10 @@ export default {
     }),
     alreadyFoundDesc() {
       //reverse order of alreadyFound
-      console.log('alreadyFoundDesc', this.alreadyFound);
       return this.alreadyFound.slice().reverse();
+    },
+    readMoreEntries() {
+      return this.alreadyFoundDesc.slice(0, this.currentPage * this.pageSize);
     },
     percentage() {
       //caclulate percentage of found kennzeichen, with one decimal
@@ -55,6 +55,10 @@ export default {
     }
   },
   methods: {
+    readMore() {
+      if(this.readMoreEntries.length >= this.alreadyFoundDesc.length) return;
+      this.currentPage++;
+    },
     startGame() {
       this.$store.dispatch('collectGame/startGame');
     },

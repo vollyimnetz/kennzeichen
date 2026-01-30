@@ -1,6 +1,6 @@
 {
-  "_VAlert-D1hMHRpt.js": {
-    "file": "assets/VAlert-D1hMHRpt.js",
+  "_VAlert-CF3KHPKJ.js": {
+    "file": "assets/VAlert-CF3KHPKJ.js",
     "name": "VAlert",
     "imports": [
       "index.html"
@@ -17,8 +17,8 @@
     "file": "assets/VChip-BBW9Skeu.css",
     "src": "_VChip-BBW9Skeu.css"
   },
-  "_VChip-DafnwoPL.js": {
-    "file": "assets/VChip-DafnwoPL.js",
+  "_VChip-BJA5k6x_.js": {
+    "file": "assets/VChip-BJA5k6x_.js",
     "name": "VChip",
     "imports": [
       "index.html"
@@ -38,8 +38,12 @@
     "file": "assets/format-BafLkDee.js",
     "name": "format"
   },
-  "_forwardRefs-B_1rOJZs.js": {
-    "file": "assets/forwardRefs-B_1rOJZs.js",
+  "_forwardRefs-DE_hTVlJ.css": {
+    "file": "assets/forwardRefs-DE_hTVlJ.css",
+    "src": "_forwardRefs-DE_hTVlJ.css"
+  },
+  "_forwardRefs-DY3Ikfn4.js": {
+    "file": "assets/forwardRefs-DY3Ikfn4.js",
     "name": "forwardRefs",
     "imports": [
       "index.html"
@@ -48,16 +52,12 @@
       "assets/forwardRefs-DE_hTVlJ.css"
     ]
   },
-  "_forwardRefs-DE_hTVlJ.css": {
-    "file": "assets/forwardRefs-DE_hTVlJ.css",
-    "src": "_forwardRefs-DE_hTVlJ.css"
-  },
   "_kennzeichen-DRy4gHu4.js": {
     "file": "assets/kennzeichen-DRy4gHu4.js",
     "name": "kennzeichen"
   },
   "index.html": {
-    "file": "assets/index-C0FGPYoZ.js",
+    "file": "assets/index-CXNPcFg5.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -80,15 +80,15 @@
     "src": "node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2"
   },
   "src/views/Backup.vue": {
-    "file": "assets/Backup-B9MVglTZ.js",
+    "file": "assets/Backup-DmRctdDo.js",
     "name": "Backup",
     "src": "src/views/Backup.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_VAlert-D1hMHRpt.js",
-      "_forwardRefs-B_1rOJZs.js",
-      "_VChip-DafnwoPL.js",
+      "_VAlert-CF3KHPKJ.js",
+      "_forwardRefs-DY3Ikfn4.js",
+      "_VChip-BJA5k6x_.js",
       "_format-BafLkDee.js"
     ],
     "css": [
@@ -96,7 +96,7 @@
     ]
   },
   "src/views/CollectGame.vue": {
-    "file": "assets/CollectGame-BSMAZ14O.js",
+    "file": "assets/CollectGame-CjhDGWtZ.js",
     "name": "CollectGame",
     "src": "src/views/CollectGame.vue",
     "isDynamicEntry": true,
@@ -104,43 +104,43 @@
       "index.html",
       "_date.helper-D_udXe64.js",
       "_kennzeichen-DRy4gHu4.js",
-      "_VChip-DafnwoPL.js",
-      "_VAlert-D1hMHRpt.js",
+      "_VChip-BJA5k6x_.js",
+      "_VAlert-CF3KHPKJ.js",
       "_format-BafLkDee.js"
     ],
     "css": [
-      "assets/CollectGame-BOXYYMp9.css"
+      "assets/CollectGame-BnX3EDXn.css"
     ]
   },
   "src/views/Home.vue": {
-    "file": "assets/Home-YShVv_P0.js",
+    "file": "assets/Home-ClWkDzna.js",
     "name": "Home",
     "src": "src/views/Home.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_VChip-DafnwoPL.js",
+      "_VChip-BJA5k6x_.js",
       "_kennzeichen-DRy4gHu4.js",
-      "_forwardRefs-B_1rOJZs.js"
+      "_forwardRefs-DY3Ikfn4.js"
     ],
     "css": [
       "assets/Home-CkfNd37Q.css"
     ]
   },
   "src/views/NumberGame.vue": {
-    "file": "assets/NumberGame-BcTLJlvm.js",
+    "file": "assets/NumberGame-IE4VsRqJ.js",
     "name": "NumberGame",
     "src": "src/views/NumberGame.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
       "_date.helper-D_udXe64.js",
-      "_VChip-DafnwoPL.js",
+      "_VChip-BJA5k6x_.js",
       "_format-BafLkDee.js"
     ]
   },
   "src/views/Page404.vue": {
-    "file": "assets/Page404-CxVOaYUf.js",
+    "file": "assets/Page404-BhiQj_NL.js",
     "name": "Page404",
     "src": "src/views/Page404.vue",
     "isDynamicEntry": true,

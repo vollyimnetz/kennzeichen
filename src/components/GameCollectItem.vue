@@ -1,5 +1,5 @@
 <template>
-  <v-list-item>
+  <v-list-item v-if="kennzeichen">
     <h2>{{kennzeichen.id}}</h2>
     <v-list-item-title><span v-html="kennzeichen.locationHtml"></span>, {{kennzeichen.state}}</v-list-item-title>
     <v-list-item-subtitle><i>{{dateOutput}}</i></v-list-item-subtitle>
@@ -19,7 +19,11 @@ export default {
   }),
   computed: {
     kennzeichen() {
-        return kennzeichen.find(elem => elem.id === this.item.kennzeichen);
+        let result = kennzeichen.find(elem => elem.id === this.item.kennzeichen);
+        if(!result) {
+            console.warn('Kennzeichen not found:', this.item.kennzeichen);
+        }
+        return result;
     },
     dateOutput() {
         return this.dateHelper.format(this.item.foundAt, 'HH:mm \'Uhr, am\' dd.MM.yyyy');

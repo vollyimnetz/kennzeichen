@@ -38,11 +38,9 @@ export default {
       };
       const jsonString = JSON.stringify(backupdata, null, 2);
 
-      const blob = new Blob([jsonString], {
-        type: "application/json;charset=utf-8"
-      });
+      const blob = new Blob([jsonString], { type: "application/json;charset=utf-8" });
 
-      downloadjs( blob, "kennzeichen_backup_"+ format(new Date(), "yyyy-MM-dd_HH-mm-ss") +".json", "application/json");
+      downloadjs( blob, "kennzeichen_backup_"+ format(new Date(), "yyyy-MM-dd_HH-mm-ss") +".json", "application/json;charset=utf-8");
     },
     async restoreBackup(event) {
       const file = event.target.files[0];
