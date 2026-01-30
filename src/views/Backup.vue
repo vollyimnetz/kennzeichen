@@ -23,6 +23,7 @@
 
 <script>
 import downloadjs from 'downloadjs';
+import { format } from 'date-fns';
 export default {
   components: {  },
   data: () => ({
@@ -35,8 +36,13 @@ export default {
         collectGame: await this.$store.dispatch('collectGame/getBackup'),
         numberGame: await this.$store.dispatch('numberGame/getBackup'),
       };
+      const jsonString = JSON.stringify(backupdata, null, 2);
 
-      downloadjs( JSON.stringify(backupdata, null, 2), "kennzeichen_backup_"+ new Date().toISOString() +".json", "application/json");
+      const blob = new Blob([jsonString], {
+        type: "application/json;charset=utf-8"
+      });
+
+      downloadjs( blob, "kennzeichen_backup_"+ format(new Date(), "yyyy-MM-dd_HH-mm-ss") +".json", "application/json");
     },
     async restoreBackup(event) {
       const file = event.target.files[0];

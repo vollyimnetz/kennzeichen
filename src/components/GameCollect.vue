@@ -15,7 +15,12 @@
 
       <v-alert color="info" v-if="alreadyFound.length===0">noch keine Kennzeichen gefunden</v-alert>
       <v-list v-else>
-        <GameCollectItem class="my-5" v-for="item in alreadyFoundDesc" :key="item.id" :item="item"></GameCollectItem>
+        <v-virtual-scroll :items="alreadyFoundDesc">
+          <template #default="{ item }">
+            <GameCollectItem :item="item"></GameCollectItem>
+          </template>
+        </v-virtual-scroll>
+        <!--<GameCollectItem class="my-5" v-for="item in alreadyFoundDesc" :key="item.kennzeichen" :item="item"></GameCollectItem>-->
       </v-list>
 
       <v-btn @click="restart" class="mt-10" color="secondary" size="small"><v-icon start>mdi-refresh</v-icon>Spiel neu starten</v-btn>
@@ -41,6 +46,7 @@ export default {
     }),
     alreadyFoundDesc() {
       //reverse order of alreadyFound
+      console.log('alreadyFoundDesc', this.alreadyFound);
       return this.alreadyFound.slice().reverse();
     },
     percentage() {
